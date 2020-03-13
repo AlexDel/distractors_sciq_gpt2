@@ -7,7 +7,7 @@ from special_tokens import tokens_set
 
 def convert_to_text(json_path_dir: str) -> None:
     samples = []
-    with open(os.path.join(os.getcwd(), json_path_dir, 'train.json')) as content:
+    with open(os.path.join(os.getcwd(), json_path_dir, 'test.json')) as content:
         json_sciq = json.loads(content.read())
  
     for item in json_sciq:
@@ -28,7 +28,7 @@ def convert_to_text(json_path_dir: str) -> None:
 
     random.shuffle(samples)
 
-    with open(os.path.join(os.getcwd(), json_path_dir, 'converted.txt'), 'w') as f:
+    with open(os.path.join(os.getcwd(), json_path_dir, 'test.txt'), 'w') as f:
         f.write('\n'.join(samples))
 
 convert_to_text('sciq')
