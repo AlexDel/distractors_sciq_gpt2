@@ -679,7 +679,7 @@ def main():
             "and load it from here, using --tokenizer_name".format(tokenizer_class.__name__)
         )
     # add pecial tokens here
-    tokenizer.add_special_tokens({'additiona_special_tokens': special_tokens_sciq})
+    tokenizer.add_special_tokens({'additional_special_tokens': special_tokens_sciq})
 
     if args.block_size <= 0:
         args.block_size = tokenizer.max_len
@@ -739,7 +739,7 @@ def main():
         # Load a trained model and vocabulary that you have fine-tuned
         model = model_class.from_pretrained(args.output_dir)
         tokenizer = tokenizer_class.from_pretrained(args.output_dir)
-        tokenizer.add_special_tokens({'additiona_special_tokens': special_tokens_sciq})
+        tokenizer.add_special_tokens({'additional_special_tokens': special_tokens_sciq})
         model.to(args.device)
 
     # Evaluation
