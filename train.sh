@@ -1,1 +1,11 @@
-python f_tune.py --output_dir=output --model_type=gpt2 --model_name_or_path=gpt2 --do_train --train_data_file=./sciq/train.txt  --do_eval   --eval_data_file=./sciq/test.txt --per_gpu_train_batch_size 2
+python f_tune.py \
+  --output_dir=output \
+  --model_type=gpt2 \
+  --model_name_or_path=gpt2 \
+  --do_train \
+  --train_data_file=./sciq/train.txt \
+  --do_eval \
+  --eval_data_file=./sciq/test.txt \
+  --per_gpu_train_batch_size 4 \
+  --num_train_epochs 2.0 \
+  --warmup_steps 1
