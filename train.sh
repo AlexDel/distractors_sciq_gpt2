@@ -6,6 +6,6 @@ python f_tune.py \
   --train_data_file=./sciq/train.txt \
   --do_eval \
   --eval_data_file=./sciq/test.txt \
-  --per_gpu_train_batch_size 4 \
+  --per_gpu_train_batch_size 3 \
   --num_train_epochs 2.0 \
   --warmup_steps 1
