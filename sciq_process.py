@@ -14,8 +14,8 @@ def convert_to_text(json_path_dir: str) -> None:
         for item in json_sciq:
             for i in range(1, 4):
                 sample_string = ' '.join([
-                    # tokens_set['support_token'],
-                    # item['support'],
+                    tokens_set['support_token'],
+                    item['support'],
                     tokens_set['question_token'],
                     item['question'],
                     tokens_set['key_token'],
